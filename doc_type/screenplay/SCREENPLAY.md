@@ -1,7 +1,6 @@
 # Screenplay
 
-This document type defines the structure and formatting rules used for
-screenplay documents in XAL Screenwriter.
+This document type defines the structure and formatting rules used for screenplay documents in Xalkomak's Screenwriter.
 
 ## Elements
 
