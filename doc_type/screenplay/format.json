@@ -1,0 +1,57 @@
+{
+    "id": "screenplay",
+    "name": "Screenplay",
+    "version": 1,
+
+    "elements": [
+        {
+            "name": "scene_heading",
+
+            "recognition": {
+                "prefixes": [
+                    "EXT.",
+                    "INT.",
+                    "#"
+                ]
+            }
+        },
+
+        {
+            "name": "action",
+
+            "recognition": {
+                "default": true,
+                "prefix": "!"
+            },
+
+            "constraints": {
+                "uppercase_first_word_requires_prefix": "!"
+            }
+        },
+
+        {
+            "name": "character",
+
+            "constraints": {
+                "case": "uppercase"
+            }
+        },
+
+        {
+            "name": "parenthetical",
+
+            "allowed_after": [
+                "character"
+            ]
+        },
+
+        {
+            "name": "dialogue",
+
+            "allowed_after": [
+                "character",
+                "parenthetical"
+            ]
+        }
+    ]
+}
