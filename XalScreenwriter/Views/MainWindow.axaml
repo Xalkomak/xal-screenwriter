@@ -1,0 +1,87 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:edit="clr-namespace:AvaloniaEdit;assembly=AvaloniaEdit"
+        x:Class="XalScreenwriter.Views.MainWindow"
+        Title="Xalkomak's Screenwriter"
+        Width="1200"
+        Height="800"
+        MinWidth="800"
+        MinHeight="600">
+
+    <DockPanel>
+
+        <!-- Menu bar -->
+        <Menu DockPanel.Dock="Top">
+
+            <MenuItem Header="_File">
+                <MenuItem Header="_New" />
+                <MenuItem Header="_Open..." />
+                <Separator />
+                <MenuItem Header="_Save" />
+                <MenuItem Header="Save _As..." />
+                <Separator />
+                <MenuItem Header="_Exit" />
+            </MenuItem>
+
+            <MenuItem Header="_Edit">
+                <MenuItem Header="_Undo" />
+                <MenuItem Header="_Redo" />
+                <Separator />
+                <MenuItem Header="Cu_t" />
+                <MenuItem Header="_Copy" />
+                <MenuItem Header="_Paste" />
+            </MenuItem>
+
+            <MenuItem Header="_View" />
+
+            <MenuItem Header="_Format" />
+
+            <MenuItem Header="_Document" />
+
+            <MenuItem Header="_Help" />
+
+        </Menu>
+
+
+        <!-- Status bar -->
+        <Border DockPanel.Dock="Bottom"
+                Background="#E0E0E0"
+                BorderBrush="#C0C0C0"
+                BorderThickness="0,1,0,0">
+
+            <TextBlock x:Name="StatusText"
+                Text="Ln 1, Col 1"
+                Margin="10,4" />
+
+        </Border>
+
+
+        <!-- Writing workspace -->
+        <ScrollViewer
+            HorizontalScrollBarVisibility="Auto"
+            VerticalScrollBarVisibility="Auto"
+            Background="#D0D0D0">
+
+            <!-- A4 page -->
+            <Border
+                Width="794"
+                Height="1123"
+                Background="White"
+                Margin="40"
+                Padding="94">
+
+                <edit:TextEditor
+                    x:Name="Editor"
+                    ShowLineNumbers="False"
+                    WordWrap="True"
+                    FontFamily="monospace"
+                    FontSize="14"
+                    Background="Transparent" />
+
+            </Border>
+
+        </ScrollViewer>
+
+    </DockPanel>
+
+</Window>
