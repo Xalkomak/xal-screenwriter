@@ -1,7 +1,7 @@
 {
     "id": "screenplay",
     "name": "Screenplay",
-    "version": 1,
+    "version": 2,
 
     "presentation": {
         "page": {
@@ -36,15 +36,13 @@
             "name": "scene_heading",
 
             "recognition": {
-                "prefixes": [
-                    "EXT.",
-                    "INT.",
-                    "#"
-                ]
-            },
-
-            "constraints": {
-                "case": "uppercase"
+                "patterns": {
+                    "prefixes": [
+                        "EXT.",
+                        "INT.",
+                        "#"
+                    ]
+                }
             }
         },
 
@@ -52,23 +50,22 @@
             "name": "action",
 
             "recognition": {
-                "default": true,
-                "prefix": "!"
-            },
-
-            "constraints": {
-                "uppercase_first_word_requires_prefix": "!"
+                "default": true
             }
         },
 
         {
             "name": "character",
 
-            "constraints": {
-                "case": "uppercase"
+            "recognition": {
+                "patterns": {
+                    "case": "uppercase"
+                }
             },
 
             "presentation": {
+                "case": "uppercase",
+
                 "alignment": {
                     "horizontal": "center"
                 }
