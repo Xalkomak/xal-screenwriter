@@ -43,6 +43,10 @@
                         "#"
                     ]
                 }
+            },
+        
+            "presentation": {
+                "case": "uppercase"
             }
         },
 
@@ -74,6 +78,13 @@
 
         {
             "name": "parenthetical",
+
+            "recognition": {
+                "patterns": {
+                    "starts_with": "(",
+                    "ends_with": ")"
+                }
+            },
 
             "allowed_after": [
                 "character"

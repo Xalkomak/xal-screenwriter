@@ -1,6 +1,7 @@
 using System;
 using Avalonia.Controls;
 using XalScreenwriter.ViewModels;
+using XalScreenwriter.Models;
 
 namespace XalScreenwriter.Views;
 

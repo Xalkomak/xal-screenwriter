@@ -1,8 +1,12 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:edit="clr-namespace:AvaloniaEdit;assembly=AvaloniaEdit"
+        xmlns:vm="using:XalScreenwriter.ViewModels"
+        xmlns:models="using:XalScreenwriter.Models"
+        x:DataType="vm:MainViewModel"
         x:Class="XalScreenwriter.Views.MainWindow"
         Title="Xalkomak's Screenwriter"
+        WindowState="Maximized"
         Width="1200"
         Height="800"
         MinWidth="800"
@@ -42,6 +46,46 @@
 
         </Menu>
 
+        <!-- Document element toolbar -->
+        <Border
+            DockPanel.Dock="Top"
+            Background="#EEEEEE"
+            BorderBrush="#CCCCCC"
+            BorderThickness="0,0,0,1"
+            Padding="6">
+
+            <StackPanel
+                HorizontalAlignment="Center"
+                Spacing="4">
+
+                <!-- Document type name -->
+                <TextBlock
+                    Text="{Binding CurrentDocument.DocumentType.Name}"
+                    HorizontalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Bold" />
+
+                <!-- Document element buttons -->
+                <ItemsControl ItemsSource="{Binding DocumentElements}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel
+                                Orientation="Horizontal"
+                                Spacing="6" />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate x:DataType="models:DocumentElementDefinition">
+                            <Button
+                                Content="{Binding DisplayName}"
+                                Padding="12,6" />
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+
+            </StackPanel>
+        </Border>
 
         <!-- Status bar -->
         <Border DockPanel.Dock="Bottom"
