@@ -27,17 +27,15 @@ public class DocumentElementDefinition
         get
         {
             string[] words = Name.Split('_');
-    
+
             for (int i = 0; i < words.Length; i++)
             {
                 if (words[i].Length > 0)
                 {
-                    words[i] =
-                        char.ToUpper(words[i][0]) +
-                        words[i][1..];
+                    words[i] = char.ToUpper(words[i][0]) + words[i][1..];
                 }
             }
-    
+
             return string.Join(" ", words);
         }
     }

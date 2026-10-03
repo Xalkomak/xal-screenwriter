@@ -1,7 +1,6 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
-using XalScreenwriter.ViewModels;
 using XalScreenwriter.Views;
 
 namespace XalScreenwriter;
@@ -19,7 +18,7 @@ public partial class App : Application
         {
             desktop.MainWindow = new MainWindow
             {
-                DataContext = new MainViewModel(),
+               
             };
         }
 

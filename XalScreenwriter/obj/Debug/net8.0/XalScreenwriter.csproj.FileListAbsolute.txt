@@ -95,3 +95,5 @@
 /home/xalkomak347/Dev/xal-screenwriter/XalScreenwriter/bin/Debug/net8.0/zh-Hans/AvaloniaEdit.resources.dll
 /home/xalkomak347/Dev/xal-screenwriter/XalScreenwriter/bin/Debug/net8.0/doc_type/screenplay/format.json
 /home/xalkomak347/Dev/xal-screenwriter/XalScreenwriter/bin/Debug/net8.0/doc_type/screenplay/SCREENPLAY.md
+/home/xalkomak347/Dev/xal-screenwriter/XalScreenwriter/bin/Debug/net8.0/doc_type/stage_play/format.json
+/home/xalkomak347/Dev/xal-screenwriter/XalScreenwriter/bin/Debug/net8.0/doc_type/stage_play/STAGE_PLAY.md

@@ -9,7 +9,7 @@ build_property.AvaloniaNameGeneratorAttachDevTools = true
 build_property.AvaloniaUseCompiledBindingsByDefault = true
 build_property.AvaloniaMainPackageVersion = 12.1.3
 build_property.AvaloniaPreviewerNetCoreToolPath = /home/xalkomak347/.nuget/packages/avalonia/12.1.3/buildTransitive//../tools/net8.0/designer/Avalonia.Designer.HostApp.dll
-build_property.AvaloniaResourcePaths = /home/xalkomak347/Dev/xal-screenwriter/XalScreenwriter/Assets/avalonia-logo.ico,/home/xalkomak347/Dev/xal-screenwriter/XalScreenwriter/App.axaml,/home/xalkomak347/Dev/xal-screenwriter/XalScreenwriter/Views/MainWindow.axaml
+build_property.AvaloniaResourcePaths = /home/xalkomak347/Dev/xal-screenwriter/XalScreenwriter/Assets/avalonia-logo.ico,/home/xalkomak347/Dev/xal-screenwriter/XalScreenwriter/App.axaml,/home/xalkomak347/Dev/xal-screenwriter/XalScreenwriter/Views/MainWindow.axaml,/home/xalkomak347/Dev/xal-screenwriter/XalScreenwriter/Views/NewDocumentWindow.axaml
 build_property.MvvmToolkitEnableINotifyPropertyChangingSupport = true
 build_property._MvvmToolkitIsUsingWindowsRuntimePack = false
 build_property.CsWinRTComponent = 
@@ -36,4 +36,7 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [/home/xalkomak347/Dev/xal-screenwriter/XalScreenwriter/Views/MainWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/xalkomak347/Dev/xal-screenwriter/XalScreenwriter/Views/NewDocumentWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

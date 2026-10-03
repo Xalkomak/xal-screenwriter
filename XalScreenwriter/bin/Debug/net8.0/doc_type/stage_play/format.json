@@ -1,0 +1,128 @@
+{
+    "id": "stage_play",
+    "name": "Stage Play",
+    "version": 1,
+
+    "presentation": {
+        "page": {
+            "size": "A4",
+            "width": 210,
+            "height": 297,
+            "unit": "mm"
+        },
+
+        "margins": {
+            "top": 25,
+            "bottom": 25,
+            "left": 25,
+            "right": 25,
+            "unit": "mm"
+        },
+
+        "alignment": {
+            "horizontal": "left",
+            "vertical": "center"
+        },
+
+        "indentation": {
+            "left": 0,
+            "right": 0,
+            "unit": "mm"
+        }
+    },
+
+    "elements": [
+        {
+            "name": "act",
+
+            "recognition": {
+                "patterns": {
+                    "case": "uppercase"
+                }
+            },
+
+            "presentation": {
+                "case": "uppercase",
+                "alignment": {
+                    "horizontal": "center"
+                }
+            }
+        },
+
+        {
+            "name": "scene",
+
+            "recognition": {
+                "patterns": {
+                    "case": "uppercase"
+                }
+            },
+
+            "presentation": {
+                "case": "uppercase",
+                "alignment": {
+                    "horizontal": "center"
+                }
+            }
+        },
+
+        {
+            "name": "stage_direction",
+
+            "recognition": {
+                "default": true
+            },
+
+            "presentation": {
+                "case": "sentence"
+            }
+        },
+
+        {
+            "name": "character",
+
+            "recognition": {
+                "patterns": {
+                    "case": "uppercase"
+                }
+            },
+
+            "presentation": {
+                "case": "uppercase",
+                "alignment": {
+                    "horizontal": "center"
+                }
+            }
+        },
+
+        {
+            "name": "parenthetical",
+
+            "recognition": {
+                "patterns": {
+                    "starts_with": "(",
+                    "ends_with": ")"
+                }
+            },
+
+            "allowed_after": [
+                "character"
+            ],
+
+            "presentation": {
+                "alignment": {
+                    "horizontal": "center"
+                }
+            }
+        },
+
+        {
+            "name": "dialogue",
+
+            "allowed_after": [
+                "character",
+                "parenthetical"
+            ]
+        }
+    ]
+}

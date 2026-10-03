@@ -8,43 +8,53 @@ public class MainViewModel : ViewModelBase
 {
     public Document CurrentDocument { get; }
     public List<DocumentElementDefinition> DocumentElements => CurrentDocument.DocumentType?.Elements ?? [];
+    public string? SelectedElementType { get; set; }
+    public List<DocumentTypeDefinition> AvailableDocumentTypes { get; }
+    public DocumentTypeDefinition? SelectedDocumentType { get; set; }
 
     public MainViewModel()
     {
-        DocumentTypeDefinition screenplay =
-            DocumentTypeLoader.Load("screenplay");
+        DocumentTypeDefinition screenplay = DocumentTypeLoader.Load("screenplay");
 
         string sample = """
-INT. Bedroom - night
+        INT. Bedroom - night
 
-The room is completely dark.
+        The room is completely dark.
 
-Penelope
-(cautious)
-Who's there?
+        PENELOPE
+        (cautious)
+        Who's there?
 
-She reaches for the light. The room suddenly illuminates.
-""";
+        She reaches for the light. The room suddenly illuminates.
+        """;
 
         CurrentDocument = new Document
         {
-            DocumentType = screenplay,
-            Content = sample
+            DocumentTypeId = "screenplay",
+            Content = sample,
+            DocumentType = DocumentTypeLoader.Load("screenplay")
         };
+        
+        AvailableDocumentTypes = DocumentTypeLoader.GetAvailableTypes();
+        SelectedDocumentType = AvailableDocumentTypes.Find(definition => definition.Id == CurrentDocument.DocumentTypeId);
 
-        CurrentDocument.Elements =
-            DocumentRecognizer.Recognize(
-                CurrentDocument.Content,
-                screenplay);
-        foreach (DocumentElement element in CurrentDocument.Elements)
-        {
-            string formatted =
-            DocumentFormatter.FormatElement(
-                element,
-                screenplay);
+        
 
-            Console.WriteLine(
-                $"{element.Type}: {formatted}");
-        }
+        
+
+        //CurrentDocument.Elements =
+        //    DocumentRecognizer.Recognize(
+        //        CurrentDocument.Content,
+        //        screenplay);
+        //foreach (DocumentElement element in CurrentDocument.Elements)
+        //{
+        //    string formatted =
+        //    DocumentFormatter.FormatElement(
+        //        element,
+        //        screenplay);
+//
+        //    Console.WriteLine(
+        //        $"{element.Type}: {formatted}");
+        //}
     }
 }
