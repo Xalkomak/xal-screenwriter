@@ -4,9 +4,17 @@ namespace XalScreenwriter.ViewModels;
 
 public class MainViewModel : ViewModelBase
 {
-    public Document CurrentDocument { get; } = new()
+    public Document CurrentDocument { get; }
+
+    public MainViewModel()
     {
-        DocumentType = "screenplay",
-        Content = "Hello world!\n\nThis is Xalkomak's Screenwriter."
-    };
+        DocumentTypeDefinition screenplay =
+            DocumentTypeLoader.Load("screenplay");
+
+        CurrentDocument = new Document
+        {
+            DocumentType = screenplay,
+            Content = "Hello world!\n\nThis is Xalkomak's Screenwriter."
+        };
+    }
 }

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("XalScreenwriter")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4912431795db3e8d9cb13822d207c816bd031703")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4250cdfb430f0fef2385088b0a55b3d38063d277")]
 [assembly: System.Reflection.AssemblyProductAttribute("XalScreenwriter")]
 [assembly: System.Reflection.AssemblyTitleAttribute("XalScreenwriter")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
