@@ -3,6 +3,34 @@
     "name": "Screenplay",
     "version": 1,
 
+    "presentation": {
+        "page": {
+            "size": "A4",
+            "width": 210,
+            "height": 297,
+            "unit": "mm"
+        },
+
+        "margins": {
+            "top": 25,
+            "bottom": 25,
+            "left": 25,
+            "right": 25,
+            "unit": "mm"
+        },
+
+        "alignment": {
+            "horizontal": "left",
+            "vertical": "center"
+        },
+
+        "indentation": {
+            "left": 0,
+            "right": 0,
+            "unit": "mm"
+        }
+    },
+
     "elements": [
         {
             "name": "scene_heading",
@@ -13,6 +41,10 @@
                     "INT.",
                     "#"
                 ]
+            },
+
+            "constraints": {
+                "case": "uppercase"
             }
         },
 
@@ -34,6 +66,12 @@
 
             "constraints": {
                 "case": "uppercase"
+            },
+
+            "presentation": {
+                "alignment": {
+                    "horizontal": "center"
+                }
             }
         },
 
@@ -42,7 +80,13 @@
 
             "allowed_after": [
                 "character"
-            ]
+            ],
+
+            "presentation": {
+                "alignment": {
+                    "horizontal": "center"
+                }
+            }
         },
 
         {
@@ -51,7 +95,13 @@
             "allowed_after": [
                 "character",
                 "parenthetical"
-            ]
+            ],
+
+            "presentation": {
+                "alignment": {
+                    "horizontal": "center"
+                }
+            }
         }
     ]
 }
